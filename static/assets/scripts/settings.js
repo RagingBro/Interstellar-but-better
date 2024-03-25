@@ -1,31 +1,3 @@
-// Ads
-document.addEventListener('DOMContentLoaded', function () {
-  function adChange(selectedValue) {
-    if (selectedValue === 'default') {
-      localStorage.setItem('ad', 'on')
-    } else if (selectedValue === 'off') {
-      localStorage.setItem('ad', 'off')
-    }
-  }
-
-  var adTypeElement = document.getElementById('adType')
-
-  if (adTypeElement) {
-    adTypeElement.addEventListener('change', function () {
-      var selectedOption = this.value
-      adChange(selectedOption)
-    })
-
-    var storedAd = localStorage.getItem('ad')
-    if (storedAd === 'on') {
-      adTypeElement.value = 'default'
-    } else if (storedAd === 'off') {
-      adTypeElement.value = 'off'
-    } else {
-      adTypeElement.value = 'default'
-    }
-  }
-})
 // Dyn
 document.addEventListener('DOMContentLoaded', function () {
   function pChange(selectedValue) {
