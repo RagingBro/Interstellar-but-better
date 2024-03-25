@@ -1,28 +1,3 @@
-// Ads
-document.addEventListener('DOMContentLoaded', function () {
-  if (localStorage.getItem('ad') === null) {
-    localStorage.setItem('ad', 'on')
-  }
-
-  if (localStorage.getItem('ad') === 'on') {
-    var advDiv = document.getElementById('adv')
-    if (advDiv) {
-      var script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = '//renewpacificdistrict.com/67/2d/d2/672dd2d06db4d5552f9d4ed9cab1655b.js'
-      advDiv.appendChild(script)
-      console.log('Script inserted inside the adv div.')
-    }
-  }
-
-  if (localStorage.getItem('ad') === 'off') {
-    var advDiv = document.getElementById('adv')
-    if (advDiv) {
-      advDiv.remove()
-      console.log('The adv div has been removed.')
-    }
-  }
-})
 // Themes
 var themeid = localStorage.getItem('theme')
 themeEle = document.createElement('link')
